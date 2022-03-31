@@ -141,6 +141,7 @@ class Insertar:                         #abarca las acciones de insersión de da
     INSERT_Actividad = 'INSERT INTO Actividades_Usuarios(USER_ID,SESSION_ID,SEGMENT_ID,SEGMENT_DESCRIPTION,' \
                        'USER_CITY,DEVICE_BROWSER,DEVICE_OS,DEVICE_MOBILE,EVENT_TIME,EVENT_ID,EVENT_DESCRIPTION) ' \
                        'VALUES (?,?,?,?,?,?,?,?,getdate(),?,?)'
+    INSERT_Primer = 'INSERT INTO Primer_Sesion (USER_ID,SESSION_ID,EVENT_TIME,EVENT_ID,EVENT_DESCRIPTION) VALUES (?,?,getdate(),?,?)'
     GET_TIME = 'WITH Up_Time as(SELECT USER_ID,SESSION_ID, DATEDIFF(mi,min(CASE WHEN EVENT_ID = 1 THEN EVENT_TIME END), min(CASE WHEN EVENT_ID = 2 THEN EVENT_TIME END)) as TIME_SESSION ' \
                'FROM Actividades_Usuarios ' \
                'WHERE EVENT_ID in (1, 2) ' \
@@ -167,7 +168,11 @@ class Insertar:                         #abarca las acciones de insersión de da
         cursor = Conec.conectar().cursor()
         cursor.execute(cls.INSERT_Actividad,ID_USER,ID_SESSION,ID_SEGMENT,SEGMENT_DESCRIPTION,USER_CITY,DEVICE_BROWSER,DEVICE_OS,DEVICE_MOBILE,EVENT_ID,EVENT_DESCRIPTION)
 
-
+    @classmethod
+    def first_login(cls,ID_USER,ID_SESSION,EVENT_ID,EVENT_DESCRIPTION):
+        cursor = Conec.conectar().cursor()
+        cursor.execute(cls.INSERT_Primer,ID_USER,ID_SESSION,EVENT_ID,EVENT_DESCRIPTION)
+        
     @classmethod                                                            #método que calcula y actualiza el campo TIME_SPENT para la sesión realizada
     def time_session(cls,ID_SESSION):
         cursor = Conec.conectar().cursor()
