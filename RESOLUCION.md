@@ -25,10 +25,9 @@ Como resolvería este tipo de petición? Explique detalladamente el proceso de l
 
 R: Para resolver el tipo de petición requerido por el KPI, primero definimos la Base de Datos que vamos a utilizar sobre la cual requerir las consultar adecuadas.
 
-En este sentido, seleccionamos la plataforma SQL Server 2019 como motor y gestor de la base de datos. La razón de dicha elección se fundamenta en la solidez de rendimiento y la agilidad de uso, con herramientas intuitivas aplicadas a la construcción de las consultas.
+En este sentido, seleccionamos la plataforma SQL Server 2019 como motor y gestor de la base de datos. La razón de dicha elección se fundamenta en la solidez de rendimiento y la agilidad de uso, con herramientas intuitivas aplicadas a la construcción de las consultas. El archivo 'Santander_DB.zip' contiene el backup completo de la base de datos generada.
 
-Para iniciar el proceso de limpieza y transformación de la información, primeramente se crean las tablas necesarias en la base de datos. Para ello hacemos uso de Python como soporte de programación.
-A fin de vincular al programa con la base de datos, recurrimos a la librería 'pyodbc'
+Para iniciar el proceso de limpieza y transformación de la información, primeramente se crean las tablas necesarias en la base de datos. Para ello hacemos uso de Python como soporte de programación. A fin de vincular al programa con la base de datos, recurrimos a la librería 'pyodbc'
 
 Se determinan las tablas Actividades_Usuarios y Primer_Sesion como el soporte principal de la actividad a ser analizada. Se añaden las tablas Usuarios, Segmentos y Eventos como soporte de datos complementarios.
 
