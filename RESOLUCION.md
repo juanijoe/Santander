@@ -37,7 +37,8 @@ A partir de las tablas mencionadas, haciendo foco en la consigna, se define aten
     * Sesiones_Consecutivas: CTE que nos marca aquellos usuarios que han efectuado sesiones por al menos dos días consecutivos
 
     ![Sesiones_Consecutivas](https://user-images.githubusercontent.com/101049711/161111306-a7ba0898-f155-458f-aa3d-5e43bdb583cf.jpg)
-    
+    ![KPI_Top10_Usuarios](https://user-images.githubusercontent.com/101049711/161111858-d30b43f5-94e4-489f-9b5a-b2473e397e1e.jpg)
+
     * Sesiones_Extensas: CTE que señala los usuarios cuyas sesiones igualan o superan los 5 minutos de actividad
 
     ![Sesiones_Extensas](https://user-images.githubusercontent.com/101049711/161111409-5c370bb9-5e77-499b-bd06-db8b099d48fd.jpg)
