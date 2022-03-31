@@ -36,19 +36,19 @@ A partir de las tablas mencionadas, haciendo foco en la consigna, se define aten
 
 Sesiones_Consecutivas: CTE que nos marca aquellos usuarios que han efectuado sesiones por al menos dos días consecutivos
 
-    ![Sesiones_Consecutivas](https://user-images.githubusercontent.com/101049711/161111306-a7ba0898-f155-458f-aa3d-5e43bdb583cf.jpg)
+![Sesiones_Consecutivas](https://user-images.githubusercontent.com/101049711/161111306-a7ba0898-f155-458f-aa3d-5e43bdb583cf.jpg)
 
 Sesiones_Extensas: CTE que señala los usuarios cuyas sesiones igualan o superan los 5 minutos de actividad
 
-    ![Sesiones_Extensas](https://user-images.githubusercontent.com/101049711/161111409-5c370bb9-5e77-499b-bd06-db8b099d48fd.jpg)
+![Sesiones_Extensas](https://user-images.githubusercontent.com/101049711/161111409-5c370bb9-5e77-499b-bd06-db8b099d48fd.jpg)
 
 Diferente_Login: CTE que individualiza los usuarios con actividad en sesiones diferente al login
 
-    ![Diferente_Login](https://user-images.githubusercontent.com/101049711/161111462-bce3b77b-a206-4b40-b80e-81dddc859428.jpg)
+![Diferente_Login](https://user-images.githubusercontent.com/101049711/161111462-bce3b77b-a206-4b40-b80e-81dddc859428.jpg)
 
 Con estos datos señalados, podemos obtener las vistas gráficas de cada consulta. A continuación, sumamos la información de la tabla Usuarios, que contiene la totalidad de usuarios registrados.
 
-    ![Porcentaje_Condiciones](https://user-images.githubusercontent.com/101049711/161111531-ff0f0274-69e1-4447-8c83-8571fa561e56.jpg)
+![Porcentaje_Condiciones](https://user-images.githubusercontent.com/101049711/161111531-ff0f0274-69e1-4447-8c83-8571fa561e56.jpg)
 
 Finalmente vinculando este dato, con el filtrado por la sumatoria de condicionales aplicados como el total de usuarios que cumplen los requisitos, podemos obtener el porcentaje de los mismos, respecto al total de usuarios. Esto se realiza en forma dinámica, es decir, atendiendo a que ambos datos depurados pueden verse modificados como consecuencia de la actividad
 
@@ -57,7 +57,7 @@ Realice el DER que de soporte al modelo dimensional solicitado por la banca priv
 
 R: a continuación se adjunta la imagen del modelo dimensional planteado. Se puede detallar que para el mismo las tablas principales Actividades_Usuarios y Primer_Sesion constituyen las tablas de hechos. Se añaden las tablas dimensionales de Usuarios, Eventos y Segmentos como agregado de datos de la actividad.
 
-Las vistas gráficas Sesiones_Consecutivas, Sesiones_Extensas y Diferente_Login, contribuyen a la construcción de la constelación para la obtención del dato final buscado.
+Las vistas gráficas Sesiones_Consecutivas, Sesiones_Extensas y Diferente_Login, contribuyen a la construcción de la constelación para la obtención del dato final buscado. TOP10_Usuarios_Login se añade como la vista de los usuarios filtrados por la segunda KPI solicitada
 
 ![image](https://github.com/juanijoe/Santander/blob/main/Modelo_DER.jpg)
 
