@@ -55,6 +55,10 @@ Finalmente vinculando este dato, con el filtrado por la sumatoria de condicional
 ### Ejercicio 1
 Realice el DER que de soporte al modelo dimensional solicitado por la banca privada.
 
+R: a continuación se adjunta la imagen del modelo dimensional planteado. Se puede detallar que para el mismo las tablas principales Actividades_Usuarios y Primer_Sesion constituyen las tablas de hechos. Se añaden las tablas dimensionales de Usuarios, Eventos y Segmentos como agregado de datos de la actividad.
+
+Las vistas gráficas Sesiones_Consecutivas, Sesiones_Extensas y Diferente_Login, contribuyen a la construcción de la constelación para la obtención del dato final buscado.
+
 ![image](https://github.com/juanijoe/Santander/blob/main/Modelo_DER.jpg)
 
 ### Ejercicio 2 
