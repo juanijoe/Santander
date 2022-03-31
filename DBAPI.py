@@ -36,6 +36,7 @@ if __name__ == '__main__':
                 segmen = list(segmen)
                 ciudad = Conec.get_city()
                 Insertar.update_event(ID_USER, ID_SESSION, segmen[0], segmen[1], ciudad, navegador, sistema, device, 1,'Login')
+                Insertar.first_login(ID_USER,ID_SESSION,1,'Login')
                 while(True):
                     print('''
                             1)Consultar Caja de Ahorros
